@@ -2,7 +2,9 @@
   font-family: logoFont;
   src: url(./fonts/RemachineScript_Personal_Use.ttf);
 }
-
+html,body{
+  overflow-x:hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -50,14 +52,15 @@ header {
   background-color: rgb(255, 218, 224);
 }
 .container{
-  height: 100%;
   padding: 5%;
   font-size: 20px;
 }
 .row1{
   display: flex;
   justify-content:space-between;
+  flex-wrap: wrap;
   height: 30%;
+  width: 100%;
 }
 
 
@@ -95,4 +98,19 @@ header {
 
 #logo{
   padding: 10%;
+}
+
+@media (max-width: 800px) {
+  .row1{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+  }
+  .nav{
+    width: 70%;
+  }
+  .col{
+    margin-left: 0;
+  }
 }
